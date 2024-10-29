@@ -1,0 +1,1 @@
+﻿MeuHelloWorld.Executor.Executar();

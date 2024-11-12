@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e texto na mesma linha</title>
+</head>
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(75, 75, 228);
+    }
+    div {
+        background-color: rgb(126, 71, 178);
+    }
+
+    label {
+        display: block;
+    }
+    img {
+        height: 200px;
+    }
+</style>
+<body>
+    <main>
+        <section style="display: flex; gap: 5rem;">
+            <div>
+                <label for="">Texto 1</label>
+                <input type="text" name="" id="">
+                <label for="">Texto 2</label>
+                <input type="text" name="" id="">
+            </div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.vRMdxUe28jQ7BAbUO-zLHQHaFr?rs=1&pid=ImgDetMain" alt="Pizza">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

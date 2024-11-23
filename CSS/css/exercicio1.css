@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    font-weight: 400;
+}
+
+h1 {
+    color: red;
+    font-size: 36px;
+    background-color: rgb(12, 74, 12);
+}
+
+h3 {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(12, 74, 12);
+}
+
+h4 {
+    background-color: rgb(203, 201, 201);
+    font-style: italic;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Flex</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    section {
+        border: solid 2px black;
+        border-radius: 8px;
+        padding: 20px;
+        height: 200px;
+    }
+
+    .nav {
+        background-color: #1d3557;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 1em;
+    }
+
+    .nav__list {
+        display: flex;
+        list-style-type: none;
+        gap: 1em;
+    }
+
+    .nav__link {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .aside {
+        background-color: #f4a261;
+        flex-grow: 1;
+        padding: 1em;
+    }
+
+    .aside__list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 1em;
+    }
+
+    .aside__link {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: white;
+    }
+
+    .conteudo {
+        padding: 1em;
+
+        flex-grow: 9;
+    }
+
+    .div-vazio {
+        height: 50px;
+        width: 50px;
+        background-color: gray;
+    }
+
+    .vermelho {
+        background-color: rgb(246, 77, 77);
+    }
+
+    .verde {
+        background-color: rgb(166, 246, 166);
+    }
+
+    .azul {
+        background-color: rgb(152, 152, 245);
+    }
+
+    .exe1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .exe2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .exe3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exe4 {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .coluna {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        gap: 1em;
+        padding: 1em;
+        flex-grow: 1;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__list-item">
+                <a class="nav__link" href="www.Google.com.br">Google</a>
+            </li>
+            <li>
+                <a class="nav__link" href="www.Google.com.br">Terra</a>
+            </li>
+            <li>
+                <a class="nav__link" href="www.Google.com.br">Uol</a>
+            </li>
+            <li>
+                <a class="nav__link" href="www.Google.com.br">Yahoo</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <aside class="aside">
+            <ul class="aside__list">
+                <li class="aside__list-item">
+                    <a class="aside__link" href="www.Google.com.br">Google</a>
+                </li>
+                <li>
+                    <a class="aside__link" href="www.Google.com.br">Terra</a>
+                </li>
+                <li>
+                    <a class="aside__link" href="www.Google.com.br">Uol</a>
+                </li>
+                <li>
+                    <a class="aside__link" href="www.Google.com.br">Yahoo</a>
+                </li>
+            </ul>
+        </aside>
+        <div class="conteudo">
+            <h2>Exercício 01</h2>
+            <section class="exe1">
+                <div class="div-vazio vermelho">
+
+                </div>
+            </section>
+
+            <h2>Exercício 02</h2>
+            <section class="exe2">
+                <div class="div-vazio vermelho">
+
+                </div>
+            </section>
+
+            <h2>Exercício 03</h2>
+            <section class="exe3">
+                <div class="div-vazio vermelho">
+
+                </div>
+            </section>
+
+            <h2>Exercício 04</h2>
+            <section class="exe4">
+                <div class="coluna verde">
+                    <p>
+                        Primeiro paragrafo da coluna
+                    </p>
+                    <p>
+                        Segundo paragrafo da coluna
+                    </p>
+                </div>
+
+                <div class="coluna azul">
+                    <p>
+                        Primeiro paragrafo da coluna
+                    </p>
+                    <p>
+                        Segundo paragrafo da coluna
+                    </p>
+                </div>
+            </section>
+
+            <h2>Exercício 05</h2>
+            <section class="exe4">
+                <div class="coluna verde">
+                    <p>
+                        Primeiro paragrafo da coluna
+                    </p>
+                    <p>
+                        Segundo paragrafo da coluna
+                    </p>
+                </div>
+
+                <div class="coluna azul">
+                    <p>
+                        Primeiro paragrafo da coluna
+                    </p>
+                    <p>
+                        Segundo paragrafo da coluna
+                    </p>
+                </div>
+
+                <div class="coluna vermelho">
+                    <p>
+                        Primeiro paragrafo da coluna
+                    </p>
+                    <p>
+                        Segundo paragrafo da coluna
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.btn {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: azure;
+}
+
+.btn-primary {
+    background-color: rgb(86, 203, 86);
+    color: white;
+    border-color: rgb(141, 130, 130);
+}
+
+.btn-primary:hover {
+    background-color: rgb(65, 157, 65);
+}
+
+.btn-warning {
+    background-color: rgb(255, 255, 38);
+    color: black;
+    border-color: rgb(141, 130, 130);
+}
+
+.btn-warning:hover {
+    background-color: rgb(180, 180, 38);
+}
+
+.btn-danger {
+    background-color: rgb(240, 58, 58);
+    color: white;
+    border-color: rgb(141, 130, 130);
+}
+
+.btn-danger:hover {
+    background-color: rgb(195, 52, 52);
+}

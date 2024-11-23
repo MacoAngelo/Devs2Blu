@@ -12,3 +12,17 @@ C:\Users\marco.angelo\Desktop\MeuHelloWorld\MeuHelloWorld\obj\Debug\net6.0\refin
 C:\Users\marco.angelo\Desktop\MeuHelloWorld\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.pdb
 C:\Users\marco.angelo\Desktop\MeuHelloWorld\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.genruntimeconfig.cache
 C:\Users\marco.angelo\Desktop\MeuHelloWorld\MeuHelloWorld\obj\Debug\net6.0\ref\MeuHelloWorld.dll
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\bin\Debug\net6.0\MeuHelloWorld.exe
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\bin\Debug\net6.0\MeuHelloWorld.deps.json
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\bin\Debug\net6.0\MeuHelloWorld.runtimeconfig.json
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\bin\Debug\net6.0\MeuHelloWorld.dll
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\bin\Debug\net6.0\MeuHelloWorld.pdb
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.AssemblyInfoInputs.cache
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.AssemblyInfo.cs
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.dll
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\refint\MeuHelloWorld.dll
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.pdb
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\MeuHelloWorld.genruntimeconfig.cache
+C:\Users\marco.angelo\Desktop\repositorio.aula\fundamentos.csharp\MeuHelloWorld\obj\Debug\net6.0\ref\MeuHelloWorld.dll

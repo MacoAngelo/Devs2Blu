@@ -1,0 +1,28 @@
+﻿@using MinhaPrimeiraAplicacaoWeb.Models.Pessoas
+@model PessoasModel
+<div>
+    <h3>Pessoas</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Turma</th>
+                <th>Situação</th>
+                <th>Colunaa</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var pessoa in Model.Pessoas)
+            {
+                <tr>
+                    <td>@pessoa.ID</td>
+                    <td>@pessoa.Nome</td>
+                    <td>@pessoa.Turma</td>
+                    <td>@pessoa.Situacao</td>
+                    <td>@pessoa.Situacao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

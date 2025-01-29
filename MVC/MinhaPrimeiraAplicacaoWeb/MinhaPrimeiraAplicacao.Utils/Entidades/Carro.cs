@@ -11,18 +11,19 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
 {
     public class Carro
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string Nome { get; set; }
         public int Ano { get; set; }
         public string Placa { get; set; }
 
-        public static Carro Get(int id)
+        public static Carro Get(long id)
         {
             using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
             {
                 conn.Open();
-                var query = $"SELECT ID, NOME, ANO, PLACA FROM CARROS WHERE ID = {id}";
+                var query = $"SELECT ID, NOME, ANO, PLACA FROM CARROS WHERE ID = @ID";
                 var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.Add(new MySqlParameter("ID", id));
 
                 var reader = cmd.ExecuteReader();
                 if (reader.Read())

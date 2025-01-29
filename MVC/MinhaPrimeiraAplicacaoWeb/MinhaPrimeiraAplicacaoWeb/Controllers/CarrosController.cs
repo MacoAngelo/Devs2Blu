@@ -39,9 +39,7 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
 
         public IActionResult Record(long id)
         {
-            //var carroAtual = _Carros.FirstOrDefault(carro => carro.ID == id);
-
-            return View(null);
+            return View(new CarroModel(Carro.Get(id)));
         }
     }
 }

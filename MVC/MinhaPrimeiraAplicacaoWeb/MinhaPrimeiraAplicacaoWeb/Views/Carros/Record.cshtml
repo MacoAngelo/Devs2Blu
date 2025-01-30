@@ -1,19 +1,27 @@
 ﻿@using MinhaPrimeiraAplicacaoWeb.Models.Carros
 @model CarroModel
 <div>
-    <h3>Carro</h3>
-    <form>
-        <div class="form-group">
-            <label>Nome</label>
-            <input type="text" id="nome" class="form-control" asp-for="Nome" />
-        </div>
-        <div class="form-group">
-            <label>Ano</label>
-            <input type="number" id="nome" class="form-control" asp-for="Ano" />
-        </div>
-        <div class="form-group">
-            <label>Placa</label>
-            <input type="text" id="nome" class="form-control" asp-for="Placa" />
-        </div>
-    </form>
+	<h3>Carro</h3>
+	<form asp-controller="Carros" asp-action="Record" method="post">
+		<input type="hidden" name="id" asp-for="ID" />
+		<div class="form-group">
+			<label>Nome</label>
+			<input type="text" id="nome" class="form-control" asp-for="Nome" />
+		</div>
+		<div class="form-group">
+			<label>Ano</label>
+			<input type="number" id="nome" class="form-control" asp-for="Ano" />
+		</div>
+		<div class="form-group">
+			<label>Placa</label>
+			<input type="text" id="nome" class="form-control" asp-for="Placa" />
+		</div>
+
+		<br />
+		<button class="btn btn-primary float-end m-1" type="submit" asp-route-type="save">Salvar</button>
+		@if (Model.ID > 0)
+		{
+			<button class="btn btn-danger float-end m-1" type="submit" asp-route-type="delete">Excluir</button>
+		}
+	</form>
 </div>

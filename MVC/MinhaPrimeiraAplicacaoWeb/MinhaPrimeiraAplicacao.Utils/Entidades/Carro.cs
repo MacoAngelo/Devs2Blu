@@ -66,5 +66,56 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
 
             return result;
         }
+
+        public void Create()
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
+            {
+                conn.Open();
+
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO CARROS (NOME, ANO, PLACA) 
+                                    VALUES (@pNOME, @pANO, @pPLACA)";
+
+                cmd.Parameters.Add(new MySqlParameter("pNOME", Nome));
+                cmd.Parameters.Add(new MySqlParameter("pANO", Ano));
+                cmd.Parameters.Add(new MySqlParameter("pPLACA", Placa));
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Update()
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
+            {
+                conn.Open();
+
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = @$"UPDATE CARROS SET NOME = @pNOME, PLACA = @pPLACA, ANO = @pANO
+                                    WHERE ID = @pID";
+
+                cmd.Parameters.Add(new MySqlParameter("pID", ID));
+                cmd.Parameters.Add(new MySqlParameter("pNOME", Nome));
+                cmd.Parameters.Add(new MySqlParameter("pANO", Ano));
+                cmd.Parameters.Add(new MySqlParameter("pPLACA", Placa));
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Delete()
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
+            {
+                conn.Open();
+
+                var cmd = conn.CreateCommand();
+                cmd.Parameters.Add(new MySqlParameter("pID", ID));
+                cmd.CommandText = @$"DELETE FROM CARROS WHERE ID = @pID";
+
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

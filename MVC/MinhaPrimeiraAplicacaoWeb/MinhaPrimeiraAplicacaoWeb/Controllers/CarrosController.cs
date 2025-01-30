@@ -37,9 +37,43 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
             return View(model);
         }
 
-        public IActionResult Record(long id)
+        public IActionResult Record(long? id)
         {
-            return View(new CarroModel(Carro.Get(id)));
+            var model = new CarroModel();
+
+            if (id.HasValue)
+            {
+                model = new CarroModel(Carro.Get(id.Value));
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Record(CarroModel model, string type)
+        {
+            Carro carro = model.GetEntidade();
+            if (type == "save")
+            {
+                if (carro.ID > 0)
+                {
+                    carro.Update();
+                }
+                else
+                {
+                    carro.Create();
+                }
+            }
+            else if (type == "delete")
+            {
+                carro.Delete();
+            }
+            else
+            {
+                return BadRequest("Requisição inválida!");
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

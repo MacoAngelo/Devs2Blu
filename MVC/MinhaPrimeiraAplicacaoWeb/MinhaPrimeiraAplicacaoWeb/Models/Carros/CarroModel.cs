@@ -4,10 +4,10 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
 {
     public class CarroModel
     {
-        public float ID { get; set; }
+        public long ID { get; set; }
         public string Nome { get; set; }
         public string Placa { get; set; }
-        public long Ano {  get; set; }
+        public int Ano {  get; set; }
 
         public CarroModel()
         {
@@ -20,6 +20,17 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
             Nome = carro.Nome;
             Placa = carro.Placa;
             Ano = carro.Ano;
+        }
+
+        public Carro GetEntidade()
+        {
+            return new Carro()
+            {
+                ID = ID,
+                Nome = Nome,
+                Placa = Placa,
+                Ano = Ano
+            };
         }
     }
 }

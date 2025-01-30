@@ -2,7 +2,8 @@
 @model CarrosModel
 <div class="text-center">
     <table class="table table-striped">
-        <h3>Carros</h3>
+        <h3 class="float-start">Carros</h3>
+        <a type="button" class="btn btn-primary float-end" asp-controller="Carros" asp-action="Record">Novo</a>
         <thead>
             <tr>
                 <th>Código</th>
@@ -21,7 +22,7 @@
                     <td>@carro.Placa</td>
                     <td>@carro.Ano</td>
                     <td>
-                        <a type="button" class="btn btn-warning" asp-controller="Carros" asp-action="Record" asp-route-id="@carro.ID">Editar</a>
+                        <a type="button" class="btn btn-primary" asp-controller="Carros" asp-action="Record" asp-route-id="@carro.ID">Abrir</a>
                     </td>
                 </tr>
             }

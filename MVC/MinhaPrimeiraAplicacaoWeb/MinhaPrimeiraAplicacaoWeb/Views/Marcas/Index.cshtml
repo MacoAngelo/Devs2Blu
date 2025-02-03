@@ -1,0 +1,26 @@
+﻿@using MinhaPrimeiraAplicacaoWeb.Models.Marcas
+@model MarcasModel
+<div class="text-center">
+    <table class="table table-striped">
+        <h3 class="float-start">Marcas</h3>
+        <a type="button" class="btn btn-primary float-end" asp-controller="Marcas" asp-action="Record">Novo</a>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var marca in Model.Marcas)
+            {
+                <tr>
+                    <td>@marca.ID</td>
+                    <td>@marca.Nome</td>
+                    <td>
+                        <a type="button" class="btn btn-primary" asp-controller="Marcas" asp-action="Record" asp-route-id="@marca.ID">Abrir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+﻿@using MinhaPrimeiraAplicacaoWeb.Models.Marcas
+@model MarcaModel
+<div>
+	<h3>Marca</h3>
+	<form asp-controller="Marcas" asp-action="Record" method="post">
+		<input type="hidden" name="id" asp-for="ID" />
+		<div class="form-group">
+			<label>Nome</label>
+			<input type="text" id="nome" class="form-control" asp-for="Nome" />
+		</div>
+
+		<br />
+		<button class="btn btn-primary float-end m-1" type="submit" asp-route-type="save">Salvar</button>
+		@if (Model.ID > 0)
+		{
+			<button class="btn btn-danger float-end m-1" type="submit" asp-route-type="delete">Excluir</button>
+		}
+	</form>
+</div>

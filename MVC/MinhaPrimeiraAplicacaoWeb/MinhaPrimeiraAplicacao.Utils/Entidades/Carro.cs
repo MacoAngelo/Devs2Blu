@@ -9,9 +9,10 @@ using MySqlX.XDevAPI.Common;
 
 namespace MinhaPrimeiraAplicacao.Utils.Entidades
 {
-    public class Carro
+    public class Carro : EntidadeBase
     {
-        public long ID { get; set; }
+        protected override string TableName => "CARROS";
+
         public string Nome { get; set; }
         public int Ano { get; set; }
         public string Placa { get; set; }
@@ -99,20 +100,6 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
                 cmd.Parameters.Add(new MySqlParameter("pNOME", Nome));
                 cmd.Parameters.Add(new MySqlParameter("pANO", Ano));
                 cmd.Parameters.Add(new MySqlParameter("pPLACA", Placa));
-
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-        public void Delete()
-        {
-            using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
-            {
-                conn.Open();
-
-                var cmd = conn.CreateCommand();
-                cmd.Parameters.Add(new MySqlParameter("pID", ID));
-                cmd.CommandText = @$"DELETE FROM CARROS WHERE ID = @pID";
 
                 cmd.ExecuteNonQuery();
             }

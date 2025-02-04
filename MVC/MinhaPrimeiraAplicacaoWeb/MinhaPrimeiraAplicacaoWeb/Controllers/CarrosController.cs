@@ -11,7 +11,7 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
             var model = new CarrosModel();
             model.Carros = new List<CarroModel>();
 
-            var carros = Carro.GetAll();
+            var carros = new Carro().GetAll();
 
             // Mais Simples
             //foreach (var carro in carros)
@@ -43,7 +43,7 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
 
             if (id.HasValue)
             {
-                model = new CarroModel(Carro.Get(id.Value));
+                model = new CarroModel(new Carro().Get(id.Value));
             }
 
             return View(model);

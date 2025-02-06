@@ -17,6 +17,26 @@
 			<input type="text" id="nome" class="form-control" asp-for="Placa" />
 		</div>
 
+		<div class="form-group">
+			<label>Categoria</label>
+			<select id="categoria" class="form-select" asp-for="Categoria">
+				<option value="10">Hatch</option>
+				<option value="20">Sedan</option>
+				<option value="30">Coupe</option>
+				<option value="40">SUV</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>Marca</label>
+			<select id="marca" class="form-select" asp-for="Marca">
+				@foreach(var marca in Model.MarcasDisponíveis)
+				{
+					<option value="@marca.ID">@marca.Nome</option>
+				}
+			</select>
+		</div>
+
 		<br />
 		<button class="btn btn-primary float-end m-1" type="submit" asp-route-type="save">Salvar</button>
 		@if (Model.ID > 0)

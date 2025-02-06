@@ -12,18 +12,29 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
 {
     public class Carro : EntidadeBase1<Carro>
     {
+        public enum CategoriaVeiculo
+        {
+            Hatch = 10,
+            Sedan = 20,
+            Coupe = 30,
+            SUV = 40
+        }
+
         protected override string TableName => "CARROS";
         protected override List<string> Fields => new List<string>()
         {
-            "ID",
             "NOME",
             "ANO",
-            "PLACA"
+            "PLACA",
+            "CATEGORIA",
+            "MARCA"
         };
 
         public string Nome { get; set; }
         public int Ano { get; set; }
         public string Placa { get; set; }
+        public Marca Marca { get; set; }
+        public CategoriaVeiculo Categoria { get; set; }
 
         protected override Carro Fill(MySqlDataReader reader)
         {
@@ -33,26 +44,10 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
             aux.Nome = reader.GetString("NOME");
             aux.Ano = reader.GetInt32("ANO");
             aux.Placa = reader.GetString("PLACA");
+            aux.Categoria = (CategoriaVeiculo)reader.GetInt32("CATEGORIA");
+            aux.Marca = new Marca().Get(reader.GetInt64("MARCA"));
 
             return aux;
-        }
-
-        public void Create()
-        {
-            using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
-            {
-                conn.Open();
-
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO CARROS (NOME, ANO, PLACA) 
-                                        VALUES (@pNOME, @pANO, @pPLACA)";
-
-                cmd.Parameters.Add(new MySqlParameter("pNOME", Nome));
-                cmd.Parameters.Add(new MySqlParameter("pANO", Ano));
-                cmd.Parameters.Add(new MySqlParameter("pPLACA", Placa));
-
-                cmd.ExecuteNonQuery();
-            }
         }
 
         protected override void FillParameters(MySqlParameterCollection parameters)
@@ -60,6 +55,8 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
             parameters.Add(new MySqlParameter("pNOME", Nome));
             parameters.Add(new MySqlParameter("pANO", Ano));
             parameters.Add(new MySqlParameter("pPLACA", Placa));
+            parameters.Add(new MySqlParameter("pCATEGORIA", Categoria.GetHashCode()));
+            parameters.Add(new MySqlParameter("pMARCA", Marca.ID));
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using MinhaPrimeiraAplicacao.Utils.Entidades;
+using MinhaPrimeiraAplicacaoWeb.Models.Marcas;
 
 namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
 {
@@ -8,6 +9,10 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
         public string Nome { get; set; }
         public string Placa { get; set; }
         public int Ano {  get; set; }
+        public Carro.CategoriaVeiculo Categoria {  get; set; }
+        public MarcaModel Marca {  get; set; }
+
+        public List<MarcaModel> MarcasDisponíveis { get; set; }
 
         public CarroModel()
         {
@@ -20,6 +25,8 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
             Nome = carro.Nome;
             Placa = carro.Placa;
             Ano = carro.Ano;
+            Marca = new MarcaModel(carro.Marca);
+            Categoria = carro.Categoria;
         }
 
         public Carro GetEntidade()
@@ -29,7 +36,9 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
                 ID = ID,
                 Nome = Nome,
                 Placa = Placa,
-                Ano = Ano
+                Ano = Ano,
+                Marca = Marca.GetEntidade(),
+                Categoria = Categoria
             };
         }
     }

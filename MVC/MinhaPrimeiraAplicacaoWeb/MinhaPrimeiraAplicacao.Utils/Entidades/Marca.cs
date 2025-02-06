@@ -19,7 +19,8 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
         {
             var aux = new Marca();
 
-            aux.Nome = reader.GetString("NOME");
+            aux.ID = reader.GetInt64("ID");
+			aux.Nome = reader.GetString("NOME");
 
             return aux;
         }

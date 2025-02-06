@@ -46,6 +46,9 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
                 model = new CarroModel(new Carro().Get(id.Value));
             }
 
+            var marcas = new Marca().GetAll();
+            model.MarcasDisponíveis = marcas.Select(marca => new Models.Marcas.MarcaModel(marca)).ToList();
+
             return View(model);
         }
 

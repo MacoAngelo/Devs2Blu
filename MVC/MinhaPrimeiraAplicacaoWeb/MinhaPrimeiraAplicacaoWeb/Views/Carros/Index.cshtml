@@ -10,6 +10,8 @@
                 <th>Nome</th>
                 <th>Placa</th>
                 <th>Ano</th>
+                <th>Categoria</th>
+                <th>Marca</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -21,6 +23,8 @@
                     <td>@carro.Nome</td>
                     <td>@carro.Placa</td>
                     <td>@carro.Ano</td>
+                    <td>@carro.Categoria.ToString()</td>
+                    <td>@carro.Marca.Nome</td>
                     <td>
                         <a type="button" class="btn btn-primary" asp-controller="Carros" asp-action="Record" asp-route-id="@carro.ID">Abrir</a>
                     </td>

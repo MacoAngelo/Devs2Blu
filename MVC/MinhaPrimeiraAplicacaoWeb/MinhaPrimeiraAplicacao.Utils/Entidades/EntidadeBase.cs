@@ -23,7 +23,7 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
             using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
             {
                 conn.Open();
-                var query = $"SELECT {string.Join(", ", Fields)} FROM {TableName} WHERE ID = @ID";
+                var query = $"SELECT ID, {string.Join(", ", Fields)} FROM {TableName} WHERE ID = @ID";
                 var cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.Add(new MySqlParameter("ID", id));
 
@@ -44,7 +44,7 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
             using (MySqlConnection conn = new MySqlConnection(DBConnection.CONNECTION_STRING))
             {
                 conn.Open();
-                var query = $"SELECT {string.Join(", ", Fields)} FROM CARROS";
+                var query = $"SELECT ID, {string.Join(", ", Fields)} FROM {TableName}";
                 var cmd = new MySqlCommand(query, conn);
 
                 var reader = cmd.ExecuteReader();
@@ -67,6 +67,7 @@ namespace MinhaPrimeiraAplicacao.Utils.Entidades
                 cmd.CommandText = @$"INSERT INTO {TableName} ({string.Join(", ", Fields)}) 
                                         VALUES ({string.Join(", ", Fields.Select(campo => $"@p{campo}"))})";
 
+                FillParameters(cmd.Parameters);
                 cmd.ExecuteNonQuery();
             }
         }

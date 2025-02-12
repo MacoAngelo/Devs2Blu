@@ -9,7 +9,7 @@ namespace MinhaPrimeiraAplicacao.Utils.Database
 {
     public class DBConnection
     {
-        public const string CONNECTION_STRING = "Server=localhost;Database=carrux;User ID=root;Password=senha;";
+        public const string CONNECTION_STRING = "Server=localhost;Database=carrux;User ID=root;Password=root;";
 
         public static bool TestarConexao()
         {

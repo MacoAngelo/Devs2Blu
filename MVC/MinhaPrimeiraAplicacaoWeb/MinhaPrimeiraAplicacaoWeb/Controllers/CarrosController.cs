@@ -78,5 +78,40 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet("api/v1/Carros")]
+        public IActionResult Get()
+        {
+            var result = new Carro().GetAll().Select(carro => new CarroModel(carro));
+
+            return Ok(result);
+        }
+
+        [HttpPost("api/v1/Carro")]
+        public IActionResult Post([FromBody] CarroModel carro)
+        {
+            var carroEntidade = carro.GetEntidade();
+            carroEntidade.Create();
+
+            return Ok("Carro cadastrado!");
+        }
+
+        [HttpPut("api/v1/Carro/{id}")]
+        public IActionResult Put(long id, [FromBody] CarroModel carro)
+        {
+            var carroEntidade = new Carro().Get(id);
+            carroEntidade.Update();
+
+            return Ok("Carro atualizado!");
+        }
+
+        [HttpDelete("api/v1/Carros/{id}")]
+        public IActionResult Delete(long id)
+        {
+            var carro = new Carro().Get(id);
+            carro.Delete();
+
+            return Ok("Carro deletado!");
+        }
     }
 }

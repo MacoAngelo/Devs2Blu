@@ -97,10 +97,22 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
         }
 
         [HttpPut("api/v1/Carro/{id}")]
-        public IActionResult Put(long id, [FromBody] CarroModel carro)
+        public IActionResult Put(long id, [FromBody] CarroModel carroAtualizado)
         {
-            var carroEntidade = new Carro().Get(id);
-            carroEntidade.Update();
+            var carroDB = new Carro().Get(id);
+
+            //if (carroDB.Nome != carroAtualizado.Nome)
+            //{
+            //    carroDB.Nome = carroAtualizado.Nome;
+            //}
+
+            carroDB.Nome = carroAtualizado.Nome ?? carroDB.Nome;
+            carroDB.Ano = carroAtualizado.Ano ?? carroDB.Ano;
+            carroDB.Categoria = carroAtualizado.Categoria ?? carroDB.Categoria;
+            carroDB.Placa = carroAtualizado.Placa ?? carroDB.Placa;
+            carroDB.Marca.ID = carroAtualizado.Marca.ID ?? carroDB.Marca.ID;
+
+            carroDB.Update();
 
             return Ok("Carro atualizado!");
         }

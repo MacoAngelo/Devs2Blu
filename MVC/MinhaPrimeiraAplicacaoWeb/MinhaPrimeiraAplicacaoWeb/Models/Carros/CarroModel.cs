@@ -8,8 +8,8 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
         public long ID { get; set; }
         public string Nome { get; set; }
         public string Placa { get; set; }
-        public int Ano {  get; set; }
-        public Carro.CategoriaVeiculo Categoria {  get; set; }
+        public int? Ano {  get; set; }
+        public Carro.CategoriaVeiculo? Categoria {  get; set; }
         public MarcaModel Marca {  get; set; }
 
         public List<MarcaModel> MarcasDisponíveis { get; set; }
@@ -36,9 +36,9 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Carros
                 ID = ID,
                 Nome = Nome,
                 Placa = Placa,
-                Ano = Ano,
+                Ano = Ano.Value,
                 Marca = Marca.GetEntidade(),
-                Categoria = Categoria
+                Categoria = Categoria.Value
             };
         }
     }

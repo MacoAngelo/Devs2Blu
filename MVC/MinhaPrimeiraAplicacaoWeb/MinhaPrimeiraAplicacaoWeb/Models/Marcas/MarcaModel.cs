@@ -5,7 +5,7 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Marcas
 {
     public class MarcaModel
     {
-        public long ID { get; set; }
+        public long? ID { get; set; }
         public string Nome { get; set; }
 
 		public MarcaModel()
@@ -23,7 +23,7 @@ namespace MinhaPrimeiraAplicacaoWeb.Models.Marcas
 		{
 			return new Marca()
 			{
-				ID = ID,
+				ID = ID.Value,
 				Nome = Nome,
 			};
 		}

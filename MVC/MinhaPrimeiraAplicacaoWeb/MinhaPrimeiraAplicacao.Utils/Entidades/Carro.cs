@@ -10,6 +10,32 @@ using Org.BouncyCastle.Crypto.Generators;
 
 namespace MinhaPrimeiraAplicacao.Utils.Entidades
 {
+    /*
+     INSERT INTO MARCAS (NOME) VALUES 
+('Toyota'),
+('Ford'),
+('Honda'),
+('Chevrolet'),
+('Volkswagen');
+
+
+INSERT INTO CARROS (NOME, ANO, PLACA, CATEGORIA, MARCA) VALUES
+('Corolla', 2020, 'ABC1234', 10, 1), 
+('Civic', 2021, 'DEF5678', 20, 3),
+('Fusca', 1985, 'GHI9012', 30, 5),
+('Cruze', 2019, 'JKL3456', 20, 4),
+('Gol', 2022, 'MNO7890', 10, 5),
+('Hilux', 2021, 'PQR1234', 40, 1),
+('Fiesta', 2020, 'STU5678', 10, 2),
+('HR-V', 2023, 'VWX9012', 40, 3),
+('Tracker', 2022, 'YZA3456', 40, 4),
+('Polo', 2021, 'BCD7890', 10, 5),
+('Yaris', 2022, 'EFG1234', 10, 1),
+('Onix', 2020, 'HIJ5678', 20, 4),
+('S10', 2022, 'QRS7890', 40, 4),
+('Civic', 2020, 'TUV1234', 20, 3)
+     */
+
     public class Carro : EntidadeBase1<Carro>
     {
         public enum CategoriaVeiculo

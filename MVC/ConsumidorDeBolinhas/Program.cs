@@ -1,0 +1,3 @@
+﻿using ConsumidorDeBolinhas;
+
+Executor.Executar();

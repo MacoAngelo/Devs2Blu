@@ -38,6 +38,7 @@ namespace ConsumidorDeBolinhas
                     Adicionar();
                     break;
                 case "3":
+                    Remover();
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
@@ -110,6 +111,23 @@ namespace ConsumidorDeBolinhas
             var response = responseTsk.Result;
             response.EnsureSuccessStatusCode();
             Console.WriteLine($"Bolinha adicionada!");
+        }
+
+        private static void Remover()
+        {
+            Console.WriteLine("Informe o ID para remover");
+            var idRemover = Console.ReadLine();
+
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Delete, $"https://localhost:44364/api/v1/bolinha/{idRemover}");
+
+            var responseTst = client.SendAsync(request);
+            responseTst.Wait();
+
+            var response = responseTst.Result;
+            response.EnsureSuccessStatusCode();
+
+            Console.WriteLine("Registro excluído");
         }
     }
 }

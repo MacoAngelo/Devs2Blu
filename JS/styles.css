@@ -1,10 +1,12 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
     background-color: #f0f0f0;
+    gap: 1em;
 }
 button {
     padding: 15px 30px;
@@ -14,4 +16,12 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+}
+
+.vermelho {
+    background-color: rgb(228, 45, 45);
+}
+
+.item-conteudo {
+    color: #eb7b59;
 }

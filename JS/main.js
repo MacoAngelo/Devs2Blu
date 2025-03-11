@@ -1,7 +1,43 @@
+const hTitulo = document.getElementById('hTitulo');
+const divConteudo = document.getElementById('divConteudo');
+const spnDescricao = document.getElementById('spnDescricao');
+
+const btnLimpar = document.getElementById('btnLimpar');
+const btnAddItem = document.getElementById('btnAddItem');
 const btnExecutar = document.getElementById('executarBtn');
+const btnAlterarCorTitulo = document.getElementById('mudarCorTitulo');
+const btnAlterarDescricao = document.getElementById('mudarDescricao');
+
+const btnAlterarCorTituloClick = function() {
+    hTitulo.style.color = prompt('Informe a cor em inglês');
+}
+
+const btnAlterarDescricaoClick = () => {
+    spnDescricao.innerText = prompt('Informe a nova descrição');
+}
+
+const btnAddItemClick = () => {
+    let item = document.createElement('p');
+    item.innerText = prompt("Informe o valor desse item!")
+    item.classList.add('item-conteudo');
+
+    divConteudo.appendChild(item);
+}
+
+const btnLimparClick = () => {
+    let itens = document.getElementsByClassName('item-conteudo');
+    for (let i = 0; i < itens.length; i++) {
+        itens[i].remove();
+    }
+}
 
 const btnExecutarClick = function () {
-    arrays();
+    // exercicioA5();
+    let tt = ExercicioObjetoEsquenta();
+tt.apresentar();
+
+    let t = exercicioA3();
+    t.apresentarInformacoes();
 }
 
 function bemVindo() {
@@ -155,6 +191,7 @@ function ExercicioObjetoEsquenta() {
         //     alert(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos. Meu CPF é ${this.cpf}!`);
         // },
         apresentar: () => {
+            let bla = this;
             alert(`Olá, meu nome é ${this.nome}, tenho ${this.idade} anos. Meu CPF é ${this.cpf}!`);
         }
     };
@@ -197,4 +234,36 @@ function arrays() {
     console.log(JSON.stringify(arrayMapeado));
 }
 
+function exercicioA3() {
+    let livro = {
+        apresentarInformacoes: () => {
+            let bla = this;
+            alert(`Livro: ${this.titulo} \n Autor: ${this.autor} \nLançamento: ${this.ano}`);
+        }
+    };
+
+    livro.titulo = "Bolinhas na galáxia";
+    livro.autor = "Marco A. Angelo";
+    livro.ano = "2030";
+
+    return livro;
+};
+
+function exercicioA5() {
+    let array = [1,2,3,4];
+    let total = 0;
+
+    array.forEach((elemento) => {
+        let quadrado = elemento * elemento;
+        console.log(quadrado);
+        total = total + quadrado;
+    });
+
+    console.log(`O total é ${total}`);
+}
+
 btnExecutar.addEventListener('click', btnExecutarClick)
+btnAddItem.addEventListener('click', btnAddItemClick)
+btnLimpar.addEventListener('click', btnLimparClick)
+btnAlterarCorTitulo.addEventListener('click', btnAlterarCorTituloClick)
+btnAlterarDescricao.addEventListener('click', btnAlterarDescricaoClick)

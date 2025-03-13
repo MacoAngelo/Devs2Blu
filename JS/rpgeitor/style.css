@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+button {
+    cursor:pointer;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #0d192b;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 60vw;
+    height: 93vh;
+    background-color: #0c5149;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+aside {
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-section label{
+    color: white;
+}
+
+.input-section select{
+    border: white 1px solid;
+    padding: 0.4em;
+    border-radius: 0.25em;
+    background-color: #e79022;
+    color: white;
+}
+
+.input-section input{
+    color: white;
+    border: white 1px solid;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background-color: #e79022;
+    width: 100px;
+}
+
+.dados__dado {
+    background-color: #a0b046;
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    border: #1f2f3a solid 5px;
+}
+
+.dados__dado span{
+    padding: 0;
+    margin: 0;
+
+    font-size: 90px;
+    color: #e0daa3;
+}
+
+#contador {
+    width: 35vw;
+    height: 30vh;
+    background-color: #09c184;
+
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-content: center;
+}
+
+#log {
+    width: 35vw;
+    height: 60vh;
+    padding: 0.5em;
+    background-color: #e0daa3;
+
+    overflow-y: auto;
+}
+
+.dados {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.lancador{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+}
+
+.botoes button{
+    color: white;
+    padding: 1em;
+    background-color: #dd423e;
+
+    width: 200px;
+    border: #1f2f3a solid 2px;
+    border-radius: 10px;
+}
+
+.contador__botao{
+    color: white;
+    padding: 0.5em;
+    background-color: #dd423e;
+
+    border: #df931b solid 2px;
+    border-radius: 10px;
+}
+
+.bom {
+background-color: #98092b;
+}
+
+.mal {
+background-color: #1f2f3a;
+}
+
+.contador__visualizador {
+    flex-grow: 1;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+.contador__visualizador span{
+    align-self: center;
+    color: #4b2409;
+    font-size: 3rem;
+}
+
+.contador__botoes {
+    flex-grow: 1;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+#log p {
+    color: #0c5149;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}

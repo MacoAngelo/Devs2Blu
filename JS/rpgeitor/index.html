@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGeitor!</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="dados" class="dados">
+        </div>
+        <div class="lancador">
+            <div class="input-section">
+                <label for="selTipoDado">Tipo de dado</label>
+                <select id="selTipoDado">
+                    <option value="6">6 posições</option>
+                    <option value="10">10 posições</option>
+                    <option value="12">12 posições</option>
+                    <option value="20">20 posições</option>
+                </select>
+            </div>
+            <div class="input-section">
+                <label for="numQtdDados">Quantidade de dados</label>
+                <input type="number" id="numQtdDados" value="0">
+            </div>
+        </div>
+        <div class="botoes">
+            <button id="btnLancarDados">Lançar!</button>
+        </div>
+    </main>
+    <aside>
+        <section id="contador">
+            <div class="contador__visualizador">
+                <span id="txtContador">0</span>
+            </div>
+            <div class="contador__botoes">
+                <!-- <button id="btnContadorAdd" onclick="btnContadorAddClick()" class="contador__botao bom">Contar</button> -->
+                <button id="btnContadorAdd" class="contador__botao bom">Contar</button>
+                <button id="btnContadorClr" class="contador__botao mal">Limpar</button>
+            </div>
+        </section>
+        <section id="log">
+            <p>Marco: 5</p>
+            <p>Marco: 1</p>
+            <p>Marco: 2</p>
+            <p>Marco: 8</p>
+            <p>Marco: 10</p>
+            <p>Marco: 4</p>
+            <p>Marco: 4</p>
+            <p>Marco: 6</p>
+            <p>Marco: 3</p>
+            <p>Marco: 7</p>
+        </section>
+    </aside>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    gap: 2em;
+}
+
+main {
+    display: flex;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+body{
+    background-color: rgb(255, 210, 134);
+}
+
+section {
+width: 50vw;
+}
+
+.titulo-secoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-comprar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0.2em;
+}
+
+.item-comprar div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-comprar input {
+    border: rgb(205, 200, 200) solid 2px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.item-quantidade {
+    width: 30px;
+}
+
+.item-base {
+    display: none;
+}
+
+.btn-confirmar {
+    background-color: rgb(109, 226, 109);
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+    width: 30px;
+}
+
+.g-1 {
+    gap: 1em;
+}
+
+.gr-1 {
+    flex-grow: 1;
+}
+
+#btnComprar {
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(109, 226, 109);
+}
+
+.comprado .item-body input, .comprado .item-body label {
+    display: none;
+}
+
+.comprado button {
+    background-color: orange;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: cadetblue;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        padding: 20px;
+        background-color: rgb(68, 128, 130);
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .display {
+        background-color: rgb(54, 51, 51);
+        border-radius: 10px;
+
+        height: 100px;
+    }
+
+    .geral {
+        gap: 20px;
+        display: flex;
+        padding: 20px;
+        border-radius: 10px;
+
+        background-color: rgb(185, 219, 221);
+    }
+
+    .numeros {
+        display: flex;
+        gap: 0.5em;
+        flex-direction: column;
+
+        background-color: transparent;
+    }
+
+    .linha {
+        display: flex;
+        gap: 0.5em;
+
+        background-color: transparent;
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100px;
+        height: 100px;
+        background-color: beige;
+        border-radius: 10px;
+
+        font-size: 3rem;
+        color: rgb(54, 51, 51);
+    }
+
+    .comandos {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        background-color: transparent;
+    }
+
+    .comando {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100px;
+        height: 100px;
+        background-color: beige;
+        border-radius: 10px;
+
+        font-size: 3rem;
+        color: rgb(54, 51, 51);
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    #logoSenac {
+        height: 75px;
+        float: left;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .g-1 {
+        flex-grow: 1;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="display">
+
+        </div>
+        <div class="geral">
+            <div class="numeros">
+                <div class="linha">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        2
+                    </div>
+                    <div class="item">
+                        3
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="item">
+                        4
+                    </div>
+                    <div class="item">
+                        5
+                    </div>
+                    <div class="item">
+                        6
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="item">
+                        7
+                    </div>
+                    <div class="item">
+                        8
+                    </div>
+                    <div class="item">
+                        9
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="item g-1">
+                        0
+                    </div>
+                </div>
+                <div class="linha">
+                        <img style="float: left; height: 100px; width: 200px;" id="logoSenac" src="https://logodownload.org/wp-content/uploads/2014/10/senac-logo-0.png"
+                alt="Logo do senac">
+                </div>
+            </div>
+            <div class="comandos">
+                <div class="linha">
+                    <div class="comando g-1">
+                        C
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="comando">
+                        x
+                    </div>
+                    <div class="comando">
+                        +
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="comando">
+                        /
+                    </div>
+                    <div class="comando">
+                        -
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="comando">
+                        (
+                    </div>
+                    <div class="comando">
+                        )
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="comando g-1">
+                        =
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <footer>
+            <img id="logoSenac" src="https://logodownload.org/wp-content/uploads/2014/10/senac-logo-0.png"
+                alt="Logo do senac">
+        </footer> -->
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Lista De Compras</h1>
+        </div>
+        <div class="titulo-secoes">
+            <div>
+                <h2>Comprar</h2>
+            </div>
+            <div>
+                <h2>Comprado</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="comprar">
+            <div id="listaComprar">
+                <article id="itemBase" class="item-comprar g-1 item-base">
+                    <div class="item-header g-1">
+                        <div class="g-1 gr-1">
+                            <label for="nome">Nome:</label>
+                            <input class="gr-1" id="nome" name="descricao" type="text">
+
+                        </div>
+                        <div class="g-1">
+                            <label for="qtd">Quantidade:</label>
+                            <input id="qtd" class="item-quantidade" type="number" name="qtd">
+
+                        </div>
+                    </div>
+                    <div class="item-body">
+                        <div class="g-1 gr-1">
+                            <label for="descricao">Descrição: </label>
+                            <input class="gr-1" name="descricao" id="descricao">
+                        </div>
+                        <div class="g-">
+                            <button class="btn-confirmar" id="finalizar">V</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button id="btnComprar">+</button>
+        </section>
+        <section id="comprado">
+            <div id="listaComprado">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

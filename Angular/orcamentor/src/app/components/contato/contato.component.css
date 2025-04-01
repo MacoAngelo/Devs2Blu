@@ -1,0 +1,23 @@
+.card {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.card p {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+}

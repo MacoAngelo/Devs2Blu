@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif; /* Fonte moderna */
+    background-color: #fafafa; /* Fundo cinza muito claro */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .btn {
+    background-color: #333;
+    color: white;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

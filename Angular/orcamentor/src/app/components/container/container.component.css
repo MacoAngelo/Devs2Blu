@@ -14,3 +14,11 @@
     gap: 20px;
     justify-content: center;
   }
+
+  h1 {
+    color: #333;
+  }
+
+  h2 {
+    color: #555;
+  }

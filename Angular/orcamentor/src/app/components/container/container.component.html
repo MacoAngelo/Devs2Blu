@@ -1,24 +1,19 @@
 <section class="container">
     <div class="container__header">
       <div class="container__header_title">
-        <h1>Contatos</h1>
-        <h2>Lista de contatos para orçamento</h2>
+        <h1>{{titulo}}</h1>
+        <h2>{{descricao}}</h2>
       </div>
       <div class="container__header_commands">
-        <button class="btn" onclick="alert('Olá')">Novo</button>
+        <button class="btn" (click)="addItem()">Novo</button>
       </div>
     </div>
     <div class="container__body">
-      <!-- <div class="card">
-        <h3>Maria Cristina</h3>
-        <p>E-mail: maria.cristina&#64;gmail.com</p>
-        <p>Telefone: (47) 2345-6789</p>
-      </div>
-      <div class="card">
-        <h3>Pedro Henrique</h3>
-        <p>E-mail: pedro.henrique&#64;gmail.com</p>
-        <p>Telefone: (47) 3456-7890</p>
-      </div> -->
-      <ng-content/>
+      @for (item of contatos; track $index) {
+        <app-contato [nome]="item.nome" [telefone]="item.telefone" [email]="item.telefone"/>
+      }
+    </div>
+    <div class="container__footer">
+      <span>{{notaRodape}}</span>
     </div>
   </section>

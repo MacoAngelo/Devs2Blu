@@ -8,7 +8,7 @@ import { ContatoComponent } from "./components/contato/contato.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavComponent, ContainerComponent, ContatoComponent],
+  imports: [CommonModule, RouterOutlet, NavComponent, ContainerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

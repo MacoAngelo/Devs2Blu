@@ -10,7 +10,9 @@
     </div>
     <div class="container__body">
       @for (item of contatos; track $index) {
-        <app-contato [nome]="item.nome" [telefone]="item.telefone" [email]="item.telefone"/>
+        <app-contato [nome]="item.nome" [telefone]="item.telefone" [email]="item.telefone">
+          <button class="btn" (click)="removeItem($index)">Deletar</button>
+        </app-contato>
       }
     </div>
     <div class="container__footer">

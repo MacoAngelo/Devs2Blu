@@ -11,6 +11,22 @@ using Org.BouncyCastle.Crypto.Generators;
 namespace MinhaPrimeiraAplicacao.Utils.Entidades
 {
     /*
+     
+    CREATE TABLE MARCAS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE CARROS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    Ano INT NOT NULL,
+    Placa VARCHAR(15) NOT NULL,
+    Categoria INT,
+    Marca INT,
+    FOREIGN KEY (Marca) REFERENCES MARCAS(id)
+);
+
      INSERT INTO MARCAS (NOME) VALUES 
 ('Toyota'),
 ('Ford'),

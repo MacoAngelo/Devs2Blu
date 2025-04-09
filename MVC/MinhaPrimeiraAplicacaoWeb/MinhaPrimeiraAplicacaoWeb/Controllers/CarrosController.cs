@@ -110,7 +110,7 @@ namespace MinhaPrimeiraAplicacaoWeb.Controllers
             carroDB.Ano = carroAtualizado.Ano ?? carroDB.Ano;
             carroDB.Categoria = carroAtualizado.Categoria ?? carroDB.Categoria;
             carroDB.Placa = carroAtualizado.Placa ?? carroDB.Placa;
-            carroDB.Marca.ID = carroAtualizado.Marca.ID ?? carroDB.Marca.ID;
+            carroDB.Marca.ID = carroAtualizado?.Marca?.ID ?? carroDB.Marca.ID;
 
             carroDB.Update();
 

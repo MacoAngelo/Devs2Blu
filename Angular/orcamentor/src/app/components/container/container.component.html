@@ -1,21 +1,30 @@
 <section class="container">
-    <div class="container__header">
-      <div class="container__header_title">
-        <h1>{{titulo}}</h1>
-        <h2>{{descricao}}</h2>
-      </div>
-      <div class="container__header_commands">
-        <button class="btn" (click)="addItem()">Novo</button>
-      </div>
+  <div class="container__header">
+    <div class="container__header_title">
+      <h1>{{ titulo }}</h1>
+      <h2>{{ descricao }}</h2>
     </div>
-    <div class="container__body">
-      @for (item of contatos; track $index) {
-        <app-contato [nome]="item.nome" [telefone]="item.telefone" [email]="item.telefone">
-          <button class="btn" (click)="removeItem($index)">Deletar</button>
-        </app-contato>
-      }
+    <div class="container__header_commands">
+      <button class="btn" (click)="addItem()">Novo</button>
     </div>
-    <div class="container__footer">
-      <span>{{notaRodape}}</span>
-    </div>
-  </section>
+  </div>
+  <div class="container__body">
+    <!-- @for (item of contatos; track $index) {
+    <app-contato
+      [nome]="item.nome"
+      [telefone]="item.telefone"
+      [email]="item.email"
+    >
+      <button class="btn" (click)="removeItem($index)">Deletar</button>
+    </app-contato>
+    } -->
+
+    IMPRIMIR SERVIÇOS - NOVOS SERVIÇOS: 1. CRIAR UM COMPONENTE PARA SERVIÇOS 2.
+    O SERVIÇO VAI POSSUIR IDENTIFICADOR, DESCRIÇÃO, VALOR, EQUIPE E RESPONSÁVEL
+    3. CRIAR UM ENDPOINT PARA BUSCAR OS SERVIÇOS DISPONÍVEIS NO SISTEMA 4.
+    INTEGRAR O ANGULAR COM O ENDPOINT DE SERVIÇOS
+  </div>
+  <div class="container__footer">
+    <span>{{ notaRodape }}</span>
+  </div>
+</section>

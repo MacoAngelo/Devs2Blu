@@ -1,0 +1,6 @@
+@orcamentor.api_HostAddress = http://localhost:5048
+
+GET {{orcamentor.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

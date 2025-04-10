@@ -4,32 +4,41 @@ using orcamentor.api.Model.Repository;
 using orcamentor.api.Model.Repository.Interfaces;
 using System;
 
+// Comandos
+// Gerar migração inicial: dotnet ef migrations add InitialCreate --verbose --context AppTechStudentsDbContext
+// Comando para aplicar migration: dotnet ef database update --project orcamentor.api --verbose --context AppTechStudentsDbContext
+
 var builder = WebApplication.CreateBuilder(args);
 
 //Banco 
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
 var carruxConnectionString = builder.Configuration.GetConnectionString("CarruxConnection");
+var techStudentsConnectionString = builder.Configuration.GetConnectionString("TechStudentsConnection");
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 23));
 
+// Postgree
 //builder.Services.AddDbContext<AppDbContext>(options =>
 //    options.UseNpgsql(connectionString));
+//builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
 
 builder.Services.AddDbContext<AppCarruxDbContext>(options => 
                 options.UseMySql(carruxConnectionString, serverVersion)
-                // The following three options help with debugging, but should
-                // be changed or removed for production.
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging()
-                .EnableDetailedErrors()
-    );
-
-//builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
+                .EnableDetailedErrors());
 builder.Services.AddScoped<ICarroRepository, CarroRepository>();
 
-// Add services to the container.
+// Adicionar centexto de banco de dados para o domínio -> TechStudents
+builder.Services.AddDbContext<AppTechStudentsDbContext>(options =>
+                options.UseMySql(techStudentsConnectionString, serverVersion)
+                .LogTo(Console.WriteLine, LogLevel.Information)
+                .EnableSensitiveDataLogging()
+                .EnableDetailedErrors());
+// Adicionar injeções do domínio -> TechStudents
+builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
